@@ -1,0 +1,296 @@
+/* GENERAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--veryLightGray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* Neutral */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+}
+
+header{
+    max-width: 500px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+header h1{
+    font-weight: 200;
+    color: var(--VeryDarkBlue);
+}
+
+header h1 span{
+    font-weight: 600;
+}
+
+p{
+    color: var(--GrayishBlue);
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 30px;
+    justify-content: center;
+    margin: auto; 
+    max-width: 1140px; 
+    position: relative;
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 30px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card.orange{
+    grid-column: 2/3;
+}
+
+.card::after{
+  
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    height: 5px;
+    width: 100%;
+}
+
+.blue::after{
+    background-color: var(--Blue);
+}
+
+.red::after{
+    background-color: var(--Red);
+}
+
+.cyan::after{
+    background-color: var(--Cyan);
+}
+
+.orange::after{
+    background-color: var(--Orange);
+}
+
+.card p{
+    margin: 15px 0 40px;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+}
+
+
+.push{
+    transform: translateY(50%);
+}
+
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 775px){
+    .cards-container{
+        grid-template-columns: 350px;
+        grid-template-rows: repeat(4, 350px);
+    }
+
+    .push{
+        transform: none;
+    }
+
+    .card.orange{
+        grid-column: 1/1;
+    }
+    
+
+}
+
+
+/* Another solutions */
+
+/* body{
+    background-color: var(--veryLightGray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    max-width: 500px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+header h1{
+    font-weight: 200;
+    color: var(--VeryDarkBlue);
+}
+
+header h1 span{
+    font-weight: 600;
+}
+
+p{
+    color: var(--GrayishBlue);
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto; 
+    max-width: 1140px; 
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 30px;
+    width: 350px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after{
+  
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    height: 5px;
+    width: 100%;
+}
+
+.blue::after{
+    background-color: var(--Blue);
+}
+
+.red::after{
+    background-color: var(--Red);
+}
+
+.cyan::after{
+    background-color: var(--Cyan);
+}
+
+.orange::after{
+    background-color: var(--Orange);
+}
+
+.card p{
+    margin: 15px 0 40px;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+}
+
+.push{
+    transform: translateY(50%);
+}
+
+footer{
+    text-align: center;
+}
+
+
+@media (max-width: 1140px){
+    .card{
+        width: 345px;
+        margin: 13px;
+    }
+
+}
+
+@media (max-width: 1115px){
+    .card{
+        width: 340px;
+        margin: 12px;
+    }
+
+}
+
+@media (max-width: 1092px){
+    .card{
+        width: 330px;
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 1050px){
+    .card{
+        width: 300px;
+        margin: 10px;
+    }
+
+    .cards-container{
+        max-width: 1000px; 
+    }
+
+}
+
+@media (max-width: 970px){
+    .card{
+        width: 250px;
+        margin: 7px;
+    }
+
+    .cards-container{
+        max-width: 900px; 
+    }
+}
+
+
+
+@media (max-width: 790px){
+    .card{
+        width: 210px;
+        margin: 5px;
+    }
+
+    .cards-container{
+        max-width: 800px; 
+    }
+}
+
+
+@media (max-width: 775px){
+ .push{
+     transform: translateY(0);
+ }
+}
+
+
+ */
